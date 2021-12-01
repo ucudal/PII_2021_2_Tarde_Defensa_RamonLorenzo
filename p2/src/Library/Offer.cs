@@ -33,5 +33,16 @@ namespace Ucu.Poo.Defense
         {
             this.items.Remove(item);
         }
+        public string AsText()
+        {
+            StringBuilder imprimir = new StringBuilder();
+            foreach(OfferItem item in items)
+            {
+                imprimir.Append(item.Residue.Name);
+                imprimir.Append(item.Quantity.ToString());
+                imprimir.Append(item.Price.ToString());
+            }
+            return imprimir.ToString();
+        }
     }
 }

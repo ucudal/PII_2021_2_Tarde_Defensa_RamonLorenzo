@@ -1,6 +1,6 @@
 namespace Ucu.Poo.Defense
 {
-    public class OfferItem
+    public class OfferItem : IOfferItem
     {
         public Residue Residue { get; set; }
 
@@ -14,6 +14,8 @@ namespace Ucu.Poo.Defense
             {
                 return this.Quantity * this.Price;
             }
+            set{;}
+            
         }
 
         public OfferItem(Residue residue, int quantity, int price)
